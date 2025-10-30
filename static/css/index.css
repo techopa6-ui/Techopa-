@@ -1,0 +1,313 @@
+/* NOTE: Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Orbitron:wght@400..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+:root{
+    --shadow-in: inset -4px 4px 4.4px rgba(0, 0, 0, 0.25);
+    --shadow-out: -5px 5px 2px 0px rgba(0, 0, 0, 0.25);
+}
+
+
+/* NOTE: Hero Section */
+#hero{
+    height: 100dvh;
+    background: url('../images/hero-bgL.png') no-repeat center center/cover;
+}
+#logo-container{
+    position: absolute;
+    top: 0px;
+    background-color: white;
+    left: 26px;
+    width: 142px;
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: var(--shadow-out);
+    border-radius: 0px 0px 15px 15px;
+}
+#logo{
+    font-size: 27px;
+    font-family: "Orbitron", sans-serif;
+    font-weight: 900;
+    color: #9d9a9300;
+    
+    background-color: #9D9A93;
+    background-clip: text;
+}
+
+nav{
+    display: flex;
+    position: absolute ;
+    top: 30px;
+    left: 925px;
+    flex-direction: row;
+}
+nav > ul li{
+    background-color: white;
+    border-radius: 32px;
+    width: 86px;
+    height: 64px;
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    box-shadow: var(--shadow-in);
+}
+nav >ul li:hover{
+    box-shadow: -5px 5px 2px 0px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+    scale: 1.05;
+    transition: all 0.2s ease-out;
+}
+nav >ul li:first-child, nav>ul li:last-child{
+    width: 64px;
+    height: 64px;
+}
+
+nav>ul li a{
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    align-self: center;
+    padding: 20px 7px;
+}
+nav ul{
+    display: flex;
+    gap: 40px;
+    flex-direction: row;
+}
+
+#explore{
+    position: absolute;
+    top: 650px;
+    right: 50%;
+    transform: translateX(50%);
+    background-color: white;
+    width: 200px;
+    height: 60px;
+    border-radius: 32px;
+    box-shadow: var(--shadow-in);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: rgb(0, 0, 0);
+}
+#explore:hover{
+    box-shadow: var(--shadow-out);
+    cursor: pointer;
+    scale: 1.02;
+    transition: all 0.1s ease-out;
+}
+
+/* MARK: Main Content */
+
+/* NOTE: Recent Innovations */
+ h2{
+    font-family: 'roboto condensed', sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+    text-align: center;
+    margin-top: 70px;
+    margin-bottom: 15px;    
+}
+.products{
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    min-width: 400px;
+
+    gap: 72px;
+    height: 511px;
+    margin: 0 73px;
+}
+.recent-innovations .products> div{
+    background-color: #d9d9d9;
+    border-radius: 32px;
+    padding: 32px;
+    font-family: 'Inter', sans-serif;
+    box-shadow: var(--shadow-out);
+    max-width: 400px;
+    min-height: 511px;
+}
+.recent-innovations .products img{
+    width: 100%;
+    border-radius: 24px;
+}
+.recent-innovations .products h3{
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 25px;
+    margin-top: 12px;
+    color: rgb(0, 0, 0);
+}
+.description{
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    margin-top: 12px;
+    color: rgb(0, 0, 0);
+}
+.price{
+    position: absolute;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    margin-top: 12px;
+    color: rgb(0, 0, 0);
+    bottom: 42px;
+}
+
+.recent-innovations .products> div:hover{
+    cursor: pointer;
+    scale: 1.02;
+    transition: all 0.2s ease-out;
+}
+
+/* NOTE: Featured Products */
+.featured-products{
+    margin-top: 150px;
+    position: relative;
+}
+.featured-products-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 37px;
+    margin: 40px 73px;
+    width: auto;
+    height: auto;   
+}
+
+.featured-products-list img {
+    max-width: 100%;
+    height: 100%;
+    border-radius: 24px;
+    display: block;
+}
+
+
+.featured-products-list div{
+    position: relative;
+    border-radius: 32px;
+
+    padding: 32px;
+    max-height: 250px; 
+    max-width: 250px; 
+}
+.featured-products-list div:hover{
+    cursor: pointer;
+    scale: 1.02;
+    transition: all 0.2s ease-out;
+}
+.f-name {
+    margin-top: 12px;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+    color: black;
+
+}
+
+.f-price {
+    margin-top: auto; 
+    text-align: center;
+    font-size: 16px;
+    font-weight: 700;
+    color: black;
+}
+
+/* MARK: About */
+.about {
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #f2f6ff, #e8ecf5);
+}
+
+.about-container {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.about h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+.about p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.about .highlight {
+  color: #0066ff;
+  font-weight: 600;
+}
+
+.about-container::before {
+  content: "";
+  flex: 1;
+  min-height: 250px;
+  background: url("../images/hero-bg.png") no-repeat center/cover;
+  border-radius: 20px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+.about-container > div {
+  flex: 1;
+  min-width: 300px;
+}
+
+
+/* MARK: Footer */
+.footer {
+  background: #1a1a1a;
+  color: #fff;
+  padding: 40px 20px 20px;
+  font-family: 'Inter', sans-serif;
+}
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 32px;
+  margin-bottom: 20px;
+}
+.footer h2, .footer h4 {
+  margin-bottom: 12px;
+}
+.footer p, .footer a, .footer li {
+  font-size: 14px;
+  color: #ccc;
+  line-height: 1.6;
+  text-decoration: none;
+}
+.footer ul {
+  list-style: none;
+  padding: 0;
+}
+.footer a:hover {
+  color: #fff;
+}
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid #333;
+  padding-top: 15px;
+  font-size: 13px;
+  color: #888;
+}
+
